@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <title>Case study between google lens and mobilenet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+    <body>
+        <center>
+            <br>
+            <div>
+            <img src="4a1c555d3350a2faec2287d966c54889.png">
+            <br>
+            
+            <br>
+            <button id="google"><img id="googl" src="google-lens-fea.png"></button>
+            
+            <br>
+            <h1>vs.</h1>
+            <br>
+           
+            <button id="mobilenet" class="btn btn-info">Mobilenet</button>
+
+<hr>
+<button id="main">
+<ol>
+   
+    <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+            <b>Test Image - </b>
+            <img src="water.jpg" class="img-responsive">
+        </li>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>GOOGLE LENS</b> - 
+        <span>Hydro Flask Vaccum Bottle with Wide Mouth</span></h5>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MOBILNET MODEL</b> - 
+        <span>water bottle</span></h5>
+        <div class="mini_result" class="col-xs-12">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Google Lens Wins!</h4>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+            <b>Test Image - </b>
+            <img src="spoon.jpg" class="img-responsive">
+        </li>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>GOOGLE LENS</b> - 
+        <span>Stainless Steel Spoon</span></h5>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MOBILNET MODEL</b> - 
+        <span>spoon</span></h5>
+        <div class="mini_result" class="col-xs-12">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Google Lens Wins!</h4>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+            <b>Test Image - </b>
+            <img src="sock.jpg" class="img-responsive">
+        </li>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>GOOGLE LENS</b> - 
+        <span>Boot Socks</span></h5>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MOBILNET MODEL</b> - 
+        <span>Sock</span></h5>
+        <div class="mini_result" class="col-xs-12">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Google Lens Wins!</h4>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+            <b>Test Image - </b>
+            <img src="plate.jpg" class="img-responsive">
+        </li>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>GOOGLE LENS</b> - 
+        <span>white dinner plate</span></h5>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MOBILNET MODEL</b> - 
+        <span>Plate</span></h5>
+        <div class="mini_result" class="col-xs-12">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Google Lens Wins!</h4>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+            <b>Test Image - </b>
+            <img src="pillow.jpg" class="img-responsive">
+        </li>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>GOOGLE LENS</b> - 
+        <span>Cotton Pillows</span></h5>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MOBILNET MODEL</b> - 
+        <span>Blanket</span></h5>
+        <div class="mini_result" class="col-xs-12">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Google Lens Wins!</h4>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+            <b>Test Image - </b>
+            <img src="bed.jpg" class="img-responsive">
+        </li>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>GOOGLE LENS</b> - 
+        <span>Wooden Headboard Bed</span></h5>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MOBILNET MODEL</b> - 
+        <span>Bed</span></h5>
+        <div class="mini_result" class="col-xs-12">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Google Lens Wins!</h4>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+            <b>Test Image - </b>
+            <img src="fan.jpg" class="img-responsive">
+        </li>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>GOOGLE LENS</b> - 
+        <span>USB Desk Fan</span></h5>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MOBILNET MODEL</b> - 
+        <span>Fan</span></h5>
+        <div class="mini_result" class="col-xs-12">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Google Lens Wins!</h4>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+            <b>Test Image - </b>
+            <img src="hanger.jpg" class="img-responsive">
+        </li>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>GOOGLE LENS</b> - 
+        <span>Wooden Hanger</span></h5>
+        <h5 class="col-sm-4 col-xs-12">
+            Output on <b>MOBILNET MODEL</b> - 
+        <span>Hanger</span></h5>
+        <div class="mini_result" class="col-xs-12">
+            <h4>Result - </h4>
+            <hr>
+            <h4>Google Lens Wins!</h4>
+        </div>
+    </div>
+
+</ol>
+<br>
+<br>
+<div><h3>Overall, Google Lens is more accurate and specific!</h3></div>
+</button>
+<br>
+<br>
+<br>
+<br>
+    
+</center>
+<div class="copy_right_footer">
+    Developed by - Srinidhi
+  </div>
+
+       
+    </body>
+    <script src="main.js"></script>
+</html>
